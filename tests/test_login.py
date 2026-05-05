@@ -12,7 +12,7 @@ def check_result(actual, expected):
 
 def test_correct_password():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
         login = LoginPage(page)
@@ -28,7 +28,7 @@ def test_correct_password():
 
 def test_wrong_password():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
         login = LoginPage(page)
@@ -44,7 +44,7 @@ def test_wrong_password():
 
 def test_wrong_username():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
         login = LoginPage(page)
